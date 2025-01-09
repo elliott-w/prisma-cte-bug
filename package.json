@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "generate": "dotenv -- prisma generate --sql",
+    "generate-sql": "dotenv -- prisma generate --sql",
+    "generate": "dotenv -- prisma generate",
     "push": "dotenv -- prisma db push",
-    "start-local-db": "docker compose up --wait"
+    "start-local-db": "docker compose up --wait",
+    "query-raw": "tsx queryRaw.ts",
+    "query-raw-unsafe": "tsx queryRawUnsafe.ts"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +16,7 @@
   "dependencies": {
     "@prisma/client": "^6.2.1",
     "dotenv-cli": "^8.0.0",
-    "prisma": "^6.2.1"
+    "prisma": "^6.2.1",
+    "tsx": "^4.19.2"
   }
 }
